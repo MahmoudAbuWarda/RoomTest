@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5dp"
+        android:elevation="7dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintCircleRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#F7F6F8"
+
+            >
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/memoryPhoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:layout_margin="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintCircleRadius="20dp"
+                app:riv_corner_radius="15dp" />
+        <!--    <ImageView
+                android:id="@+id/memoryPhoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/imageshape"
+
+                />-->
+            <TextView
+                android:id="@+id/memoryNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/memoryPhoto"
+                app:layout_constraintStart_toEndOf="@id/memoryPhoto"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Test"
+                android:textColor="@color/primary"
+                />
+
+            <TextView
+                android:id="@+id/memoryNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/primary"
+
+                app:layout_constraintStart_toStartOf="@+id/memoryNameText"
+                app:layout_constraintTop_toBottomOf="@+id/memoryNameText"
+                />
+
+            <Button
+                android:id="@+id/addContacsMainBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+
+                android:text="add contact"
+
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/addPhotoMainBtn"
+                app:layout_constraintTop_toTopOf="@id/addPhotoMainBtn"
+                app:layout_constraintStart_toEndOf="@id/addPhotoMainBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+ />
+
+            <Button
+                android:id="@+id/addPhotoMainBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="add photo"
+                android:textSize="12sp"
+                android:textStyle="bold"
+
+                app:layout_constraintEnd_toStartOf="@id/addContacsMainBtn"
+                app:layout_constraintStart_toEndOf="@id/memoryPhoto"
+               app:layout_constraintBottom_toBottomOf="parent" />
+                <ImageView
+                    android:id="@+id/deleteContactBtn"
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                 android:rotation="45"
+                    app:tint="@color/primary"
+                    />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
